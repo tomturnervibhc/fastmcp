@@ -1,8 +1,6 @@
-import os
 from fastmcp import FastMCP
 
-# Create FastMCP instance with host set for external access
-mcp = FastMCP("workable-fastmcp", host="0.0.0.0")
+mcp = FastMCP("workable-fastmcp")
 
 @mcp.tool()
 def echo(text: str) -> str:
@@ -10,5 +8,4 @@ def echo(text: str) -> str:
     return text
 
 if __name__ == "__main__":
-    # Run the MCP server using HTTP transport; host is set, port determined automatically
-    mcp.run(transport="http")
+    mcp.run(transport="sse")  # ✅ Supported transport
