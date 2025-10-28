@@ -10,5 +10,5 @@ def echo(text: str) -> str:
     return text
 
 if __name__ == "__main__":
-    # Run the MCP server using SSE transport; port and host are determined by environment
-    mcp.run(transport="sse")
+    # Run the MCP server using HTTP transport; host is set, port determined automatically
+    mcp.run(transport="http")
