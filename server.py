@@ -8,4 +8,4 @@ def echo(text: str) -> str:
     return text
 
 if __name__ == "__main__":
-    mcp.run(transport="sse")  # ✅ Supported transport
+    mcp.run(transport="sse")  # Supported transport
