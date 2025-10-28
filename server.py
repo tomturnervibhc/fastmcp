@@ -10,6 +10,5 @@ def echo(text: str) -> str:
     return text
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", "8000"))
-    # Run the MCP server using HTTP transport on the provided port
-    mcp.run(transport="http", port=port)
+    # Run the MCP server using HTTP transport; port is automatically determined by the environment
+    mcp.run(transport="http")
